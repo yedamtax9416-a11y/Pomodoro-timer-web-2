@@ -1,0 +1,97 @@
+:root {
+  --color-bg: #fdf2f0;
+  --color-primary: #e4572e;
+  --color-primary-dark: #c94317;
+  --color-text: #3a2e2c;
+  --color-muted: #8a7a76;
+  --color-card-bg: #ffffff;
+  --color-border: #f1ddd8;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  font-family: "Segoe UI", "Pretendard", -apple-system, sans-serif;
+  color: var(--color-text);
+}
+
+.setting-card {
+  width: 320px;
+  padding: 48px 32px 40px;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(228, 87, 46, 0.12);
+  text-align: center;
+}
+
+h3 {
+  margin: 0 0 24px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--color-muted);
+  text-align: left;
+}
+
+#timer-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#timer-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(228, 87, 46, 0.15);
+}
+
+.save-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  box-shadow: 0 8px 16px rgba(228, 87, 46, 0.3);
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+}
+
+.save-btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.save-btn:disabled {
+  background-color: var(--color-border);
+  color: var(--color-muted);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}

@@ -1,0 +1,121 @@
+:root {
+  --color-bg: #fdf2f0;
+  --color-primary: #e4572e;
+  --color-primary-dark: #c94317;
+  --color-text: #3a2e2c;
+  --color-muted: #8a7a76;
+  --color-card-bg: #ffffff;
+  --color-border: #f1ddd8;
+  --radius: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  font-family: "Segoe UI", "Pretendard", -apple-system, sans-serif;
+  color: var(--color-text);
+}
+
+.timer-card {
+  width: 320px;
+  padding: 48px 32px 40px;
+  background-color: var(--color-card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(228, 87, 46, 0.12);
+  text-align: center;
+}
+
+.settings-btn {
+  display: block;
+  margin: 24px auto 0;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  background-color: #f5c518;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.settings-btn:hover {
+  background-color: #e0b310;
+}
+
+h1 {
+  margin: 0 0 4px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+}
+
+.mode-label {
+  margin: 0 0 24px;
+  font-size: 14px;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.time-display {
+  font-size: 64px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 32px;
+  color: var(--color-text);
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  box-shadow: 0 8px 16px rgba(228, 87, 46, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-border);
+}
