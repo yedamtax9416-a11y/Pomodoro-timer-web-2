@@ -59,6 +59,13 @@ h1 {
   color: var(--color-primary);
 }
 
+.current-time {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-muted);
+}
+
 .mode-label {
   margin: 0 0 24px;
   font-size: 14px;

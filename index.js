@@ -17,6 +17,15 @@ let timeLeft = DEFAULT_TIME;
 let timerId = null;
 
 const timeDisplay = document.getElementById("time-display");
+const currentTimeDisplay = document.getElementById("current-time");
+
+function updateCurrentTime() {
+  const now = new Date();
+  const hours = String(now.getHours()).padStart(2, "0");
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+  const seconds = String(now.getSeconds()).padStart(2, "0");
+  currentTimeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
+}
 
 function formatTime(seconds) {
   const minutes = Math.floor(seconds / 60);
@@ -51,3 +60,5 @@ function resetTimer() {
 }
 
 updateDisplay();
+updateCurrentTime();
+setInterval(updateCurrentTime, 1000);
